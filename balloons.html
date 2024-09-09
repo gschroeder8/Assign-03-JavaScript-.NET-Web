@@ -34,9 +34,8 @@
   <script src="balloons.js"></script>
 </head>
 <body>
-  <!-- content -->
   <div class="container">
-    <h1 class="greeting animate__animated animate__heartBeat">Happy Birthday!</h1><hr />
+    <h1 class="greeting animate__animated">Happy Birthday!</h1><hr />
     <form role="form">
       <div class="row">
         <div class="col">
@@ -66,6 +65,7 @@
             </div>
           </div>
           <button type="button" class="btn btn-outline-primary mt-3" id="submit">Submit</button>
+          <button type="button" class="btn btn-outline-primary mt-3" id="selectButton">Select/Unselect All</button>
         </div>
         <div class="col">
           <img src="media/red.png" class="ball" alt="red balloon" id="redImg" />
@@ -74,6 +74,19 @@
         </div>
       </div>
     </form>
+    
+    <!-- Bootstrap Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="noBalloonsToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Warning</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Please select at least one balloon!
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
